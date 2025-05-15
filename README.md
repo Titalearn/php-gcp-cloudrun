@@ -81,7 +81,7 @@ File: `scripts/get-ip.sh`
 
 ##  4. Instructions
 
-### ▶️ Run Terraform to Deploy Infrastructure
+###  Run Terraform to Deploy Infrastructure
 
 ```bash
 cd terraform
@@ -134,14 +134,7 @@ Outlines strategies like:
 * Versioned GCS storage
 * Multi-region deployment potential
 
-###  `extra.md` – Cool Extras
 
-Showcases:
-
-* Regional log bucket as build log sink
-* Terraform modularization
-* Potential Firebase Hosting alternative
-* Docker multi-stage build optimization (planned)
 
 ---
 
