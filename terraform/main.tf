@@ -27,3 +27,11 @@ output "bucket_url" {
 output "cloudsql_instance_connection_name" {
   value = module.cloudsql.connection_name
 }
+resource "google_project_iam_binding" "logging_writer" {
+  project = "valid-kayak-459809-t2"
+  role    = "roles/logging.logWriter"
+
+  members = [
+    "serviceAccount:454751535014-compute@developer.gserviceaccount.com",
+  ]
+}
