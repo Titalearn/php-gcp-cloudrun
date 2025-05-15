@@ -9,7 +9,5 @@ terraform.tfstate*
 .idea/
 .vscode/
 .DS_Store
-.terraform/
-*.tfstate.backup
 *.log
 php-gcp-cloudrun/.git/
