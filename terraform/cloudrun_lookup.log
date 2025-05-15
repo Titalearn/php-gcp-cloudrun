@@ -1,0 +1,38 @@
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+❌ Failed to retrieve service URL. Check if the service exists and permissions are correct.
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+❌ Failed to retrieve service URL. Check if the service exists and permissions are correct.
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+API [run.googleapis.com] not enabled on project [valid-kayak-459809-t2]. Would you like to enable and retry
+ (this will take a few minutes)? (y/N)?  
+ERROR: (gcloud.run.services.describe) PERMISSION_DENIED: Cloud Run Admin API has not been used in project valid-kayak-459809-t2 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=valid-kayak-459809-t2 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. This command is authenticated as lavetmoney@gmail.com which is the active account specified by the [core/account] property.
+Cloud Run Admin API has not been used in project valid-kayak-459809-t2 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=valid-kayak-459809-t2 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+Google developers console API activation
+https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=valid-kayak-459809-t2
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    activationUrl: https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=valid-kayak-459809-t2
+    consumer: projects/valid-kayak-459809-t2
+    containerInfo: valid-kayak-459809-t2
+    service: run.googleapis.com
+    serviceTitle: Cloud Run Admin API
+  reason: SERVICE_DISABLED
+❌ Failed to retrieve service URL. Check if the service exists and permissions are correct.
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+API [run.googleapis.com] not enabled on project [valid-kayak-459809-t2]. Would you like to enable and retry
+ (this will take a few minutes)? (y/N)?  🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+API [run.googleapis.com] not enabled on project [valid-kayak-459809-t2]. Would you like to enable and retry (this 
+will take a few minutes)? (y/N)?  
+
+Command killed by keyboard interrupt
+
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+ERROR: (gcloud.run.services.describe) Cannot find service [php-app-dev]
+❌ Failed to retrieve service URL. Check if the service exists and permissions are correct.
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+❌ No URL found. Cloud Run service might not be deployed.
+🔍 Looking up Cloud Run service: php-app-dev in region: us-central1 (project: valid-kayak-459809-t2)
+✅ Cloud Run service URL: https://php-app-dev-a7ux3a5gea-uc.a.run.app

@@ -1,0 +1,15 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfstate*
+.terraform/
+*.tfstate.backup
+terraform.tfstate*
+.env
+.idea/
+.vscode/
+.DS_Store
+.terraform/
+*.tfstate.backup
+*.log
+php-gcp-cloudrun/.git/
