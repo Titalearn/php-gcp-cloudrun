@@ -7,7 +7,7 @@ images:
   - 'gcr.io/$PROJECT_ID/php-app'
 
 options:
-  logging: CLOUD_LOGGING_ONLY # This ensures logs go to Cloud Logging
-  logs_bucket: gs://valid-kayak-logs/ # Make sure this bucket exists
+  logging: CLOUD_LOGGING_ONLY  # Ensures logs are directed to Cloud Logging
+  # No need to define a logs_bucket here
 
 serviceAccount: 454751535014-compute@developer.gserviceaccount.com  # Your custom service account
