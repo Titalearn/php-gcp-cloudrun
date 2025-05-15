@@ -1,28 +1,13 @@
 steps:
-  # Step 1: Build Docker image using the Dockerfile in the 'docker/' directory
   - name: 'gcr.io/cloud-builders/docker'
-    dir: 'docker'  # 👈 This tells Cloud Build to use the docker/ folder as context
-    args: [
-      'build', 
-      '-t', 'gcr.io/$PROJECT_ID/php-app', 
-      '.'
-    ]
-
-  # Step 2: Push the built image to Google Container Registry
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/php-app']
-
-  # Step 3: Deploy the image to Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args:
-      - run
-      - deploy
-      - php-app-dev
-      - --image=gcr.io/$PROJECT_ID/php-app
-      - --region=us-central1
-      - --platform=managed
-      - --allow-unauthenticated
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/php-app', '.']
+    dir: 'docker'
 
 images:
   - 'gcr.io/$PROJECT_ID/php-app'
+
+options:
+  logging: CLOUD_LOGGING_ONLY # This ensures logs go to Cloud Logging
+  logs_bucket: gs://valid-kayak-logs/ # Make sure this bucket exists
+
+serviceAccount: 454751535014-compute@developer.gserviceaccount.com  # Your custom service account
