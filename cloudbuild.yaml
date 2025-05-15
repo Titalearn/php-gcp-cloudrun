@@ -1,28 +1,14 @@
 steps:
-  # Step 1: Build Docker image using the Dockerfile in the 'docker/' directory
   - name: 'gcr.io/cloud-builders/docker'
-    dir: 'docker'  # 👈 This tells Cloud Build to use the docker/ folder as context
-    args: [
-      'build', 
-      '-t', 'gcr.io/$PROJECT_ID/php-app', 
-      '.'
-    ]
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/php-app:$SHORT_SHA', '.']
 
-  # Step 2: Push the built image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/php-app']
+    args: ['push', 'gcr.io/$PROJECT_ID/php-app:$SHORT_SHA']
 
-  # Step 3: Deploy the image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args:
-      - run
-      - deploy
-      - php-app-dev
-      - --image=gcr.io/$PROJECT_ID/php-app
-      - --region=us-central1
-      - --platform=managed
-      - --allow-unauthenticated
+    args: ['run', 'deploy', 'php-app', '--image', 'gcr.io/$PROJECT_ID/php-app:$SHORT_SHA', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 
-images:
-  - 'gcr.io/$PROJECT_ID/php-app'
+options:
+  logging: GCS_ONLY
+logsBucket: gs://php-static-files-459809/build-logs/
