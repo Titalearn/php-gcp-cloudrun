@@ -5,3 +5,10 @@
   }
 }
 */
+
+terraform {
+  backend "gcs" {
+    bucket  = "terraform-state-459809"
+    prefix  = "state/dev"
+  }
+}
